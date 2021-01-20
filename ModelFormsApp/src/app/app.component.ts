@@ -27,9 +27,14 @@ export class AppComponent {
 
   ngOnInit(){}
 
-  PostData(signupForm:any){
-    this.FirstName=signupForm.controls.fname.value;
-    console.log(signupForm.controls);
+  PostData(){
+    this.FirstName=this.signupForm.controls.fname.value;
+    console.log(this.FirstName);
+    console.log(this.signupForm.controls);
   
+  }
+
+  resetForm(){
+    this.signupForm.reset();
   }
 }

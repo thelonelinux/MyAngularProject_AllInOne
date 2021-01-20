@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="form-bg">
-            <form [formGroup]='signupForm' (ngSubmit)="PostData(signupForm)">
+            <form [formGroup]='signupForm' >
 
                 <div class="form-group">
                     <input type="text" formControlName='fname' placeholder="Your First Name">
@@ -34,7 +34,8 @@
                 </div>
 
                 <div class="form-group">
-                    <input type="submit" value="Post Data" [disabled]='!signupForm.valid'>
+                    <button class="btn btn-primary" type="button" (click)="PostData()"  [disabled]='!signupForm.valid'>Post Data</button><br>
+                    <button class="btn btn-secondary" type="button" (click)="resetForm()" >Reset Data</button>
                 </div>
 
             </form>
